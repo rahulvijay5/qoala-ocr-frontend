@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+const BACKEND_URL = "https://qoala-ocr-backend-production.up.railway.app";
+
+// import dotenv from "dotenv";
+// dotenv.config();
 // Display Filtered Data
 
 const DisplayFilteredData = () => {
@@ -39,8 +43,11 @@ const DisplayFilteredData = () => {
 
   return (
     <div className="border p-2 rounded-md">
-      <div className="flex justify-between">
+      <div className="flex mb-2 justify-between">
+        <div>
         <h2 className="text-2xl font-bold">OCR Data:</h2>
+        <p className="text-xs opacity-60">(ⓘ Try to filter entries by DOB)</p>
+        </div>
         <div className="flex justify-end items-center gap-2">
           <div>
             <label className="" htmlFor="dateOfBirthFilter">
